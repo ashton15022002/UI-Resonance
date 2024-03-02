@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ScrollReveal from "scrollreveal";
-import "../assets/Home.css";
+import './assets/css/Home.css';
 
 const sr = ScrollReveal({
 	duration: 3000,
