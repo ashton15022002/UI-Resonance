@@ -114,7 +114,7 @@ p {
 .button:hover,
 .button-alter:hover,
 .button-brick:hover {
-	background-color: var(--secondary-color);
+	background-color: var(--secondary-color);               
 	border-color: var(--secondary-color);
 	color: #fff;
 	transition: 0.2s;
