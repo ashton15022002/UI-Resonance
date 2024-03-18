@@ -17,6 +17,7 @@ const Home = () => {
     sr.reveal(`.home__footer`, { delay: 800 });
   }, []);
 
+<<<<<<< HEAD:src/Home.tsx
   const handleButtonClick = () => {
     navigate("/input", {
       state: { link: playlistLink },
@@ -64,6 +65,62 @@ const Home = () => {
               </div>
             </div>
           </div>
+=======
+	const handleButtonClick = () => {
+		if (playlistLink.startsWith("https://")) {
+			window.location.href = "https://resonance.streamlit.app/";
+		} else {
+			navigate("/input", {
+				state: { link: playlistLink },
+			});
+		}
+	};
+
+	return (
+		<>
+			<section className="home">
+				<div className="home__container container">
+					<div className="home__data">
+						<h1 className="home__title">How sick is your music?</h1>
+						<p className="home__description">
+							Our sophisticated AI diagnoses and prescribes
+							awesome remedies for that awful music taste of
+							yours.
+						</p>
+
+						<div className="button-container">
+							<div className="button" onClick={handleButtonClick}>
+								Find out
+							</div>
+							<a
+								href="https://github.com/nauqh/resonance"
+								target="_blank"
+								className="button button-alter"
+							>
+								Learn more
+							</a>
+						</div>
+
+						<div className="home__input">
+							<p className="home__description">
+								Or upload your Spotify playlist below
+							</p>
+							<div className="input-container">
+								<form action="">
+									<input
+										type="text"
+										id="lname"
+										name="lname"
+										placeholder="Insert Spotify playlist link here"
+										onChange={(e) =>
+											setPlaylistLink(e.target.value)
+										}
+									/>
+								</form>
+							</div>
+						</div>
+					</div>
+>>>>>>> master:src/pages/Home.tsx
 
           <div className="home__img">
             <img src="/shelf.jpeg" alt="" />
@@ -71,6 +128,7 @@ const Home = () => {
           </div>
         </div>
 
+<<<<<<< HEAD:src/Home.tsx
         <footer className="home__footer">
           <div>
             A project by{" "}
@@ -99,6 +157,36 @@ const Home = () => {
       </section>
     </>
   );
+=======
+				<footer className="home__footer">
+					<div>
+						A project by{" "}
+						<span
+							style={{
+								fontSize: "2rem",
+								fontWeight: 700,
+							}}
+						>
+							<a href="https://nauqh.github.io">nauqh</a>
+						</span>
+					</div>
+					<span
+						style={{
+							alignSelf: "flex-end",
+							textAlign: "right",
+							width: 200,
+						}}
+					>
+						Powered by{" "}
+						<a href="https://openai.com/blog/new-embedding-models-and-api-updates">
+							OpenAI GPT-4
+						</a>
+					</span>
+				</footer>
+			</section>
+		</>
+	);
+>>>>>>> master:src/pages/Home.tsx
 };
 
 export default Home;
