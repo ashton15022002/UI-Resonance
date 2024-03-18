@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ScrollReveal from "scrollreveal";
-import "./assets/css/Input.css";
+import "../assets/css/Input.css";
 
 const Input = () => {
   const [values, setValues] = useState({
