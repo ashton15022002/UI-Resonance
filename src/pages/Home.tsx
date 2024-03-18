@@ -18,9 +18,13 @@ const Home = () => {
 	}, []);
 
 	const handleButtonClick = () => {
-		navigate("/input", {
-			state: { link: playlistLink },
-		});
+		if (playlistLink.startsWith("https://")) {
+			window.location.href = "https://resonance.streamlit.app/";
+		} else {
+			navigate("/input", {
+				state: { link: playlistLink },
+			});
+		}
 	};
 
 	return (
@@ -31,7 +35,7 @@ const Home = () => {
 						<h1 className="home__title">How sick is your music?</h1>
 						<p className="home__description">
 							Our sophisticated AI diagnoses and prescribes
-							awesome remedies for that aweful music taste of
+							awesome remedies for that awful music taste of
 							yours.
 						</p>
 
@@ -40,7 +44,7 @@ const Home = () => {
 								Find out
 							</div>
 							<a
-								href="https://github.com/nauqh/Resonance"
+								href="https://github.com/nauqh/resonance"
 								target="_blank"
 								className="button button-alter"
 							>
@@ -58,7 +62,7 @@ const Home = () => {
 										type="text"
 										id="lname"
 										name="lname"
-										defaultValue="Insert Spotify playlist link here"
+										placeholder="Insert Spotify playlist link here"
 										onChange={(e) =>
 											setPlaylistLink(e.target.value)
 										}
@@ -83,7 +87,7 @@ const Home = () => {
 								fontWeight: 700,
 							}}
 						>
-							<a href="https://nauqh.github.io">Team 1</a>
+							<a href="https://nauqh.github.io">nauqh</a>
 						</span>
 					</div>
 					<span
