@@ -89,7 +89,7 @@ const Home = () => {
 								fontWeight: 700,
 							}}
 						>
-							<a href="https://nauqh.github.io">nauqh</a>
+							<a href="https://nauqh.github.io">Team 1</a>
 						</span>
 					</div>
 					<span

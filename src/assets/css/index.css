@@ -121,6 +121,7 @@ p {
 	cursor: pointer;
 }
 
+
 @media screen and (max-width: 500px) {
 	h1 {
 		padding: 1rem;
