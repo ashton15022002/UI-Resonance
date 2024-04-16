@@ -13,10 +13,23 @@ import Sample from "../assets/data/sample.json";
 
 // Style
 import "../assets/Fetch.css";
+import Receipt from "../components/Receipt/Receipt";
+
+const sampleReceiptTracks = [
+	{ id: "abcd", name: "But it's Destiny", artist: "10cm", duration: "3:41" },
+	{
+		id: "abcd",
+		name: "But it's Destiny",
+		artist: "The Weeknd",
+		duration: "3:41",
+	},
+	{ id: "abcd", name: "But it's Destiny", artist: "10cm", duration: "3:41" },
+	{ id: "abcd", name: "But it's Destiny", artist: "10cm", duration: "3:41" },
+];
 
 const Diagnose = () => {
 	const [loadingComplete, setLoadingComplete] = useState(false);
-	const { color, mood, characteristics, artists, tracks, playlist } =
+	const { genre, color, mood, characteristics, artists, tracks, playlist } =
 		Sample["Korean Soft Indie"];
 
 	const [firstWriterComplete, setFirstWriterComplete] = useState(false);
@@ -119,6 +132,20 @@ const Diagnose = () => {
 									Here are the songs that are tailored for you
 								</h1>
 								<Frame trackIds={tracks} />
+							</section>
+
+							<section className="container">
+								<h1 className="result__header">
+									Your music analysis receipt
+								</h1>
+								<Receipt
+									genre={genre}
+									mood={mood}
+									characteristics={characteristics}
+									artists={artists}
+									tracks={sampleReceiptTracks}
+									playlist={playlist}
+								/>
 							</section>
 
 							<section

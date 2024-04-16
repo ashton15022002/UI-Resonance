@@ -1,0 +1,97 @@
+.receipt__container {
+	box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.1);
+	border-radius: 12px;
+	padding: 25px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	text-align: start;
+	max-width: 380px;
+}
+
+.receipt__heading {
+	font-size: 32px;
+}
+
+.receipt__characteristics {
+	font-size: 14.4px;
+	margin: 18px 0px;
+}
+
+.receipt__link {
+	text-decoration: underline;
+}
+.receipt__link:hover {
+	color: #0009;
+	transition: color 0.15s;
+}
+
+.receipt__playlist {
+	display: grid;
+	grid-template-columns: min-content 1fr min-content;
+	column-gap: 2px;
+	width: 100%;
+}
+
+.receipt__playlist-header {
+	border-top: 1px dashed;
+	border-bottom: 1px dashed;
+	font-weight: bold;
+	padding-right: 0px;
+}
+
+.receipt__playlist-item {
+	padding: 0px 10px;
+}
+
+.receipt__summary-container {
+	border-top: 1px dashed;
+	border-bottom: 1px dashed;
+	margin-top: 2px;
+}
+
+.receipt__summary-row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.small-gap {
+	margin-bottom: 9px;
+}
+
+.large-gap {
+	margin-bottom: 18px;
+}
+
+.receipt__thank-you {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 18px;
+}
+
+.receipt__download-button {
+	padding: 0.5rem 1rem;
+	color: var(--text-color);
+	background-color: #fafafa;
+	font-size: 1.2rem;
+	text-align: center;
+	border: solid 1px #161513;
+	border-radius: 0.5rem;
+}
+
+.receipt__download-button:hover {
+	background-color: var(--secondary-color);
+	border-color: var(--secondary-color);
+	color: #fff;
+	transition: 0.2s;
+	cursor: pointer;
+}
+
+.actions-container {
+	display: flex;
+	gap: 8px;
+	justify-content: center;
+}
