@@ -12,7 +12,7 @@ const Input = () => {
     danceability: 50,
     energy: 50,
     instrumentalness: 50,
-    loudness: 50,
+    loudness: -30,
     valence: 50,
     notes: "",
   });
@@ -106,8 +106,8 @@ const Input = () => {
           description="The overall loudness of a track in decibels (dB)."
           onSliderChange={handleSliderChange("loudness")}
           value={values.loudness}
-          min={0}
-          max={100}
+          min={-60}
+          max={0}
         />
         <Slider
           name="Valence"
